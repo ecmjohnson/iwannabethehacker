@@ -3,6 +3,9 @@ var http = require('http');
 var testing = require('./js/test.js');
 console.log(typeof testing.submit_code);
 
+var responses = require('./js/responses.js');
+console.log(typeof responses.success);
+
 var express = require('express');
 var app = express();
 var bodyParser = require("body-parser");
@@ -13,9 +16,9 @@ app.use(bodyParser.urlencoded({
 app.post('/', function(req, res) {
     testing.submit_code(req.body.code, 'hello', function (result) {
         if (result) {
-            res.send("success");
+            res.send(responses.success);
         } else {
-            res.send("failure");
+            res.send(responses.failure);
         }
     });
 });
