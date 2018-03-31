@@ -18,7 +18,7 @@ module.exports = {
         </body>
         </html>
     `,
-    failure : `
+    failure_part1 : `
         <!doctype html>
 
         <html lang="en">
@@ -34,6 +34,10 @@ module.exports = {
         
         <body>
         <p>You have failed the challenge. :(</p>
+        <p>
+    `,
+    failure_part2 : `
+        </p>
         </body>
         </html>
     `

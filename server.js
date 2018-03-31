@@ -11,15 +11,15 @@ var testing = require('./js/test.js');
 var responses = require('./js/responses.js');
 
 app.post('/', function(req, res) {
-    console.log(req.body);
-    // testing.submit_code(req.body.code, 'hello', function (result) {
-    //     if (result) {
-    //         res.send(responses.success);
-    //     } else {
-    //         res.send(responses.failure);
-    //     }
-    // });
-    res.send('done');
+    console.log('Request in server:', req.body);
+    testing.submit_code(req.body.code, ['hello', 'Hello', 'hello\n', 'Hello\n'], function (result, output) {
+        if (result) {
+            return res.send(responses.success);
+        } else {
+            return res.send(responses.failure_part1 + output + responses.failure_part2);
+        }
+    }, req.body.language, 8);
+    return;
 });
 
 app.use(express.static(__dirname))

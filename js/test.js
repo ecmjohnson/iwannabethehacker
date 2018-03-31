@@ -2,10 +2,8 @@ module.exports = {
     // text: code to submit
     // expected: expected output
     // lang: language of code (default is python2)
-    submit_code: function(text, expected, callback, lang)
+    submit_code: function(text, expected, callback, lang, maxlen)
     {
-        lang = lang || "python2";
-
         var request = require('request');
 
         var program = {
@@ -26,10 +24,30 @@ module.exports = {
                 console.log('error:', error);
                 console.log('statusCode:', response && response.statusCode);
             } else {
-                if (body.output.includes(expected)) {
-                    callback(true);
+                console.log('Code Execution Result:', body);
+                // Catch error codes (since they are longer than expected results)
+                if (body.output.length > maxlen) {
+                    callback(false, body.output);
+                    return;
+                }
+                // Check that it contains the expected substring
+                if (expected.constructor === Array) {
+                    for (i = 0; i < expected.length; i++) {
+                        if (body.output.includes(expected[i])) {
+                            callback(true);
+                            return;
+                        }
+                    }
+                    callback(false, body.output);
+                    return;
                 } else {
-                    callback(false);
+                    if (body.output.includes(expected)) {
+                        callback(true);
+                        return;
+                    } else {
+                        callback(false, body.output);
+                        return;
+                    }
                 }
             }
         });
