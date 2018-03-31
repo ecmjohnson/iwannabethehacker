@@ -21,5 +21,4 @@ function submit_code(program_text)
     .catch(function(err) {
         console.log('Fetch Error :-S', err);
     });
-
 }
