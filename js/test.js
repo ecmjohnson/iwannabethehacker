@@ -1,3 +1,5 @@
+submit_code("test");
+alert("did a thing (please check console)");
 
 function submit_code(program_text)
 {
