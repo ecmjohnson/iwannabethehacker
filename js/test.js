@@ -1,24 +1,42 @@
-submit_code("print('hello')");
+// submit_code("print('hello')")
 
-function submit_code(program_text)
+function submit_code(lang)
 {
-    var request = require('request');
+    console.log("calling submit_code");
+    lang = lang || "python2";
+
+    // var request = require('request');
+
+    // var text = document.getElementById("codeTextArea").value;
+    var text = "print('hello')"
 
     var program = {
-        script : program_text,
-        language: "python2",
+        script : text,
+        language: lang,
         versionIndex: "0",
         clientId: "8f618a541abc0980378440af84c904a6",
         clientSecret:"d75f203ec72e17920299fdbf06690017444dccb01704e469534ab06586543665"
     };
-    request({
-        url: 'https://api.jdoodle.com/execute',
-        method: "POST",
-        json: program
-    },
-    function (error, response, body) {
-        console.log('error:', error);
-        console.log('statusCode:', response && response.statusCode);
-        console.log('body:', body);
-    });
+    $.post(
+        'https://api.jdoodle.com/execute',
+        program,
+        (data) => {
+            console.log(data)
+        }
+    )
+    // request({
+    //     url: 'https://api.jdoodle.com/execute',
+    //     method: "POST",
+    //     json: program
+    // },
+    // function (error, response, body) {
+    //     // check for error
+    //     if (error || response.statusCode >= 400) {
+    //         console.log('error:', error);
+    //         console.log('statusCode:', response && response.statusCode);
+    //     } else {
+    //         console.log('body:', body);
+    //         console.log('program output: ', body.output)
+    //     }
+    // });
 }
