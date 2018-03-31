@@ -1,5 +1,3 @@
-// submit_code("print('hello')", 'hello')
-
 module.exports = {
     // text: code to submit
     // expected: expected output
