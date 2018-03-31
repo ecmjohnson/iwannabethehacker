@@ -13,13 +13,13 @@
 </head>
 
 <body>
-  <script src="js/ui.js"></script>
-  <form name="challenge" method="post" action="/">
-    <p id="timer"></p>
-    <p>Programming Language</p><br>
-    <textarea id="codeTextArea" name="code" rows="30" cols="50">The cat was playing in the garden.</textarea>
-    <br>
-    <input type="submit">
-  </form>
+    <p>Start Programming challenge in:</p>
+    <p id="language"></p>
+
+    <script>
+        var languages = ["perl", "php", "ruby", "go", "pascal", "vbn", "haskell", "objc", "fortran", "hack", "rust", "brainfuck", "lolcode"];
+        var language = document.getElementById("language");
+        language.innerHTML = languages[Math.floor(Math.random()*languages.length)];
+    </script>
 </body>
 </html>
