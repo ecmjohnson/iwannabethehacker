@@ -6,10 +6,11 @@ function grab_code() {
 }
 
 window.onload = function() {
-    var languages = ["perl", "php", "ruby", "go", "pascal", "vbn", "haskell", "objc", "fortran", "hack", "rust", "brainfuck", "lolcode"];
+    var languages = ["perl", "php", "go", "pascal", "vbn", "haskell", "objc", "fortran", "hack", "rust", "brainfuck", "lolcode"];
+    var languagesReal = ["Perl", "PHP", "Go", "Pascal", "Visual Basic", "Haskell", "Objective-C", "Fortran", "Hack", "Rust", "Brainfuck", "lolcode"];
     var element = document.getElementById("language");
     var language = languages[Math.floor(Math.random()*languages.length)];
-    element.innerHTML = language;
+    element.innerHTML = languagesReal;
     element.value = language;
 
     var seconds = 60;
