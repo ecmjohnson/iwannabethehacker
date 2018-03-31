@@ -1,10 +1,8 @@
 var http = require('http');
 
 var testing = require('./js/test.js');
-console.log(typeof testing.submit_code);
 
 var responses = require('./js/responses.js');
-console.log(typeof responses.success);
 
 var express = require('express');
 var app = express();

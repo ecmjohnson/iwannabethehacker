@@ -28,13 +28,9 @@ module.exports = {
                 console.log('error:', error);
                 console.log('statusCode:', response && response.statusCode);
             } else {
-                console.log('body:', body);
-                console.log('program output:', body.output)
                 if (body.output.includes(expected)) {
-                    console.log("successful submission");
                     callback(true);
                 } else {
-                    console.log("failed submission");
                     callback(false);
                 }
             }
