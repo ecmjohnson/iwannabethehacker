@@ -13,13 +13,13 @@
 </head>
 
 <body>
-    <p>Start Programming challenge in:</p>
-    <p id="language"></p>
+    <p>Select Programming challenge in:</p>
+    <select>
+    <option value="java">Java</option>
+    <option value="c++">C++</option>
+    <option value="python">Python</option>
+    <option value="ruby">Ruby</option>
+    </select>
 
-    <script>
-        var languages = ["perl", "php", "ruby", "go", "pascal", "vbn", "haskell", "objc", "fortran", "hack", "rust", "brainfuck", "lolcode"];
-        var language = document.getElementById("language");
-        language.innerHTML = languages[Math.floor(Math.random()*languages.length)];
-    </script>
 </body>
 </html>

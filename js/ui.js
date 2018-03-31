@@ -6,6 +6,9 @@ function grab_code() {
 }
 
 window.onload = function() {
+    var languages = ["perl", "php", "ruby", "go", "pascal", "vbn", "haskell", "objc", "fortran", "hack", "rust", "brainfuck", "lolcode"];
+    var language = document.getElementById("language");
+    language.innerHTML = languages[Math.floor(Math.random()*languages.length)];
     var seconds = 60;
     var mins = 1;
     function tick() {
