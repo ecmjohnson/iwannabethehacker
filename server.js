@@ -11,13 +11,15 @@ var testing = require('./js/test.js');
 var responses = require('./js/responses.js');
 
 app.post('/', function(req, res) {
-    testing.submit_code(req.body.code, 'hello', function (result) {
-        if (result) {
-            res.send(responses.success);
-        } else {
-            res.send(responses.failure);
-        }
-    });
+    console.log(req.body);
+    // testing.submit_code(req.body.code, 'hello', function (result) {
+    //     if (result) {
+    //         res.send(responses.success);
+    //     } else {
+    //         res.send(responses.failure);
+    //     }
+    // });
+    res.send('done');
 });
 
 app.use(express.static(__dirname))
