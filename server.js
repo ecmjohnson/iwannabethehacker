@@ -2,28 +2,13 @@ var http = require('http');
 var fs = require('fs');
 var express = require('express');
 var app = express();
-
-app.use( function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-      
-    // intercept OPTIONS method
-    if ('OPTIONS' == req.method) {
-      res.send(200);
-    }
-    else {
-      next();
-    }
-});
-
-app.post('handle',function(request,response){
+app.post('handle', function(request,response){
     console.log(request.body);
 });
 app.use(express.static(__dirname))
 app.listen(8080, () => {console.log("listening on port")})
 
-// require('./js/test.js')
+require('./js/test.js')
 
 // const PORT=8080;
 
