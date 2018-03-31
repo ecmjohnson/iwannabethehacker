@@ -1,14 +1,14 @@
-submit_code()
+// submit_code("print('hello')", 'hello')
 
-function submit_code(lang)
+// text: code to submit
+// expected: expected output
+// lang: language of code (default is python2)
+function submit_code(text, expected, lang)
 {
     console.log("calling submit_code");
     lang = lang || "python2";
 
     var request = require('request');
-
-    // var text = document.getElementById("codeTextArea").value;
-    var text = "print('hello')"
 
     var program = {
         script : text,
@@ -29,7 +29,12 @@ function submit_code(lang)
             console.log('statusCode:', response && response.statusCode);
         } else {
             console.log('body:', body);
-            console.log('program output: ', body.output)
+            console.log('program output:', body.output)
+            if (body.output.includes(expected)) {
+                console.log("successful submission");
+            } else {
+                console.log("failed submission");
+            }
         }
     });
 }
