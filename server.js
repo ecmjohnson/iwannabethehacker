@@ -1,7 +1,9 @@
 var http = require('http');
 var fs = require('fs');
 
-const PORT=8080; 
+require('./js/test.js')
+
+const PORT=8080;
 
 fs.readFile('./index.html', function (err, html) {
 
