@@ -1,5 +1,3 @@
-submit_code()
-
 function submit_code(lang)
 {
     console.log("calling submit_code");
