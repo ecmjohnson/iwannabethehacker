@@ -1,4 +1,4 @@
-var number_of_tests = 2;
+var number_of_tests = 4;
 var test_description = [
     'Print "hello"',
     'Sort the input comma-separated (e.g. 3,2,5) array; smallest first (e.g. 2,3,5)',
