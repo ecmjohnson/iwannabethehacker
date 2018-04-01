@@ -8,7 +8,7 @@ function clearText() {
 }
 
 window.onload = function() {
-
+    
     // NOTE: to add a language, you also need to update the mapping in test.js
     // The mapping is done in the retrieve_language function
     var languages = [
@@ -34,27 +34,28 @@ window.onload = function() {
     var test_string = test_description[test_index];
     this.document.getElementById("description").innerHTML = test_string;
 
-    // Start the timer based on the test index
-    var mins = test_time[test_index];
-    var seconds = 60;
-    function tick() {
-        var counter = document.getElementById("timer");
-        var current_minutes = mins-1;
-        seconds--;
-        if (seconds == 0 && current_minutes == 0) {
-            window.location.replace("fail.html");
-        }
-        counter.innerHTML = current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
-        if( seconds > 0 ) {
-            setTimeout(tick, 1000);
-        } else {
-            if(mins > 1){
-                countdown(mins-1);           
-            }
-        }        
-    }
-    tick();
+    var minutes = 60 * test_time[test_index],
+            display = document.querySelector('#timer');
+        startTimer(minutes, display);
 
-    
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10)
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                timer = duration;
+            }
+            if (seconds == 0 && minutes == 0) {
+               window.location.replace("legacy/fail.html");
+           }
+        }, 1000);
+    }    
 }
 
