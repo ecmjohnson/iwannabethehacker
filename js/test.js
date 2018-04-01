@@ -1,12 +1,12 @@
 module.exports = {
-    // text: code to submit
-    // expected: expected output
-    // lang: language of code (default is python2)
+    // text:        code to submit
+    // expected:    expected output (string or array of strings)
+    // callback:    function to call on evaluation complete func(bool, error_string)
+    // lang:        language of code
+    // maxlen:      maximum expected length of stdout
     submit_code: function(text, expected, callback, lang, maxlen)
     {
         var request = require('request');
-
-        console.log('language code:', retrieve_language(lang));
 
         var program = {
             script : text,
@@ -15,13 +15,14 @@ module.exports = {
             clientId: "8f618a541abc0980378440af84c904a6",
             clientSecret:"d75f203ec72e17920299fdbf06690017444dccb01704e469534ab06586543665"
         };
+
         request({
             url: 'https://api.jdoodle.com/execute',
             method: "POST",
             json: program
         },
         function (error, response, body) {
-            // check for error
+            // Check for API call error
             if (error || response.statusCode >= 400) {
                 console.log('error:', error);
                 console.log('statusCode:', response && response.statusCode);
@@ -63,6 +64,7 @@ module.exports = {
 
 function retrieve_language(real_name)
 {
+    // NOTE: left side names *MUST* match the array in UI.js
     var languages = {
         Perl : "perl",
         PHP: "php",
