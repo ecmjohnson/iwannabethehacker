@@ -35,7 +35,7 @@ window.onload = function() {
     var test_string = test_description[test_index];
     this.document.getElementById("description").innerHTML = test_string;
 
-    // Start the timer based on the time
+    // Start the timer based on the test index
     var mins = test_time[test_index];
     var seconds = 60;
     function tick() {
