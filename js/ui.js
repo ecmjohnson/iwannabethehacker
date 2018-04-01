@@ -19,7 +19,6 @@ window.onload = function() {
         "VisualBasic",
         "ObjectiveC",
         "Fortran",
-        "Hack",
         "Rust",
         "Brainfuck",
         "lolcode"
