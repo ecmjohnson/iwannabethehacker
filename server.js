@@ -16,13 +16,11 @@ app.post('/', function(req, res) {
     // The maximum length of valid stdout results (+1 for hackathon)
     var test_maxlen = [
         8,
-        12,
         6,
         4
     ];
     var test_expected = [
-        ['hello', 'Hello', 'hello\n', 'Hello\n'],
-        ['1,5,10,25', '1 5 10 25', '1;5;10;25', '1,5,10,25\n', '1 5 10 25\n', '1;5;10;25\n'],
+        ['hello', 'Hello', 'HELLO', 'hello\n', 'Hello\n', 'HELLO\n'],
         ['15', '15\n'],
         ['9', '9\n']
     ];
