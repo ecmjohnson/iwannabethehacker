@@ -5,8 +5,8 @@
 var number_of_tests = 3;
 var test_description = [
     'Print "hello"',
-    'Sum the input comma-separated (e.g. 1,5,6) array',
-    'Return the square of the provided number'
+    'Sum the input comma-separated (e.g. 1,5,6) array (read from STDIN)',
+    'Return the square of the provided number (read from STDIN)'
 ];
 var test_input = [
     '',
