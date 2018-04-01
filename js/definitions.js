@@ -25,7 +25,7 @@ var test_maxlen = [
     12,
     6,
     4
-]
+];
 var test_expected = [
     ['hello', 'Hello', 'hello\n', 'Hello\n'],
     ['1,5,10,25', '1 5 10 25', '1;5;10;25', '1,5,10,25\n', '1 5 10 25\n', '1;5;10;25\n'],
