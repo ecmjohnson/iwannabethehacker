@@ -17,7 +17,7 @@ module.exports = {
         <p>You have successfully completed the challenge! 😁</p>
         <form action="index.html">
             <br>
-            <input type="submit" value="Celebrate" />
+            <input class="button" type="submit" value="Celebrate" />
         </form>
         </body>
         </html>
@@ -36,7 +36,7 @@ module.exports = {
         <link rel="stylesheet" href="css/styles.css">
         </head>
         
-        <body class="challengeBody">
+        <body class="failBody">
         <p>You have failed the challenge. 😢</p>
         <p>
     `,
@@ -44,7 +44,7 @@ module.exports = {
         </p>
         <form action="index.html">
             <br>
-            <input type="submit" value="Cry again" />
+            <input class="button" type="submit" value="Cry again" />
         </form>
         </body>
         </html>
