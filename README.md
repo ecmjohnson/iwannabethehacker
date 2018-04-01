@@ -5,7 +5,7 @@ The hardest, most realistic programming challenge since sliced bread.
 
 A multitude of surveys resulted in the objective conclusion that the modern bourgeois employer demands absolute pliability from their human resources. The perseverance of elementary natures are conditional to bring about the production of labour in stringent operational blocks. This critical convergence can be most adequately demonstrated in the intelligentsia desired by those who misunderstand the retroactive values of human compassion and greed.
 
-But, mainly by [The Eric Andre Show](https://www.youtube.com/watch?v=jn-KkqQOres).
+But mainly inspired by [The Eric Andre Show](https://www.youtube.com/watch?v=jn-KkqQOres).
 
 ## What it does
 
