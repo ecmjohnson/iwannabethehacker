@@ -1,4 +1,4 @@
-var number_of_tests = 4;
+var number_of_tests = 3;
 var test_description = [
     'Print "hello"',
     'Sum the input comma-separated (e.g. 1,5,6) array',
