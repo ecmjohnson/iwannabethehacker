@@ -1,3 +1,7 @@
+// HOW TO ADD OR REMOVE TESTS:
+// 1. don't forget to update the number_of_tests
+// 2. don't forget to update the definitions in server.js
+
 var number_of_tests = 3;
 var test_description = [
     'Print "hello"',
