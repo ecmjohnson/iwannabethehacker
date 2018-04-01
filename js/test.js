@@ -78,7 +78,10 @@ function retrieve_language(real_name)
         Hack : "hack",
         Rust : "rust",
         Brainfuck : "brainfuck",
-        lolcode : "lolcode"
+        lolcode : "lolcode",
+        BashShell : "bash",
+        Lua : "lua",
+        SmallTalk : "smalltalk"
     };
     return languages[real_name];
 }

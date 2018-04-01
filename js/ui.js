@@ -15,10 +15,12 @@ window.onload = function() {
         "Perl",
         "PHP",
         "Go",
-        "Pascal",
         "VisualBasic",
         "ObjectiveC",
         "Fortran",
+        "BashShell",
+        "Lua",
+        "SmallTalk",
         "Rust",
         "Brainfuck",
         "lolcode"
