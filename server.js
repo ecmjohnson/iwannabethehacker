@@ -27,6 +27,7 @@ app.post('/', function(req, res) {
         ['9', '9\n']
     ];
 
+    // Submit the code for evaluation and display the result
     var test_index = req.body.testindex;
     testing.submit_code(req.body.code, test_expected[test_index], function (result, output) {
         if (result) {
