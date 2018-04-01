@@ -10,3 +10,27 @@
     font-style: bold;
     font-family: 'Courier New', Courier, monospace;
 }
+
+.welcome {
+    text-align: center;
+}
+
+.instructionsContainer {
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    padding: 10px;
+}
+.newLanguage {
+    width: 15%;
+    height: 200px;
+    float: left;
+}
+.rules {
+    margin-left: 15%;
+    height: 200px;
+}
+
+body {
+    background: #d8e7ff;
+}
