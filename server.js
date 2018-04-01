@@ -16,11 +16,13 @@ app.post('/', function(req, res) {
     // The maximum length of valid stdout results
     var test_maxlen = [
         8,
-        12
+        12,
+        3
     ]
     var test_expected = [
         ['hello', 'Hello', 'hello\n', 'Hello\n'],
-        ['1,5,10,25', '1 5 10 25', '1;5;10;25']
+        ['1,5,10,25', '1 5 10 25', '1;5;10;25', '1,5,10,25\n', '1 5 10 25\n', '1;5;10;25\n'],
+        ['15', '15\n']
     ];
 
     var test_index = req.body.testindex;
