@@ -6,12 +6,25 @@ function grab_code() {
 }
 
 window.onload = function() {
-    var languages = ["perl", "php", "go", "pascal", "vbn", "haskell", "objc", "fortran", "hack", "rust", "brainfuck", "lolcode"];
-    var languagesReal = ["Perl", "PHP", "Go", "Pascal", "Visual Basic", "Haskell", "Objective-C", "Fortran", "Hack", "Rust", "Brainfuck", "lolcode"];
+    // NOTE: to add a language, you also need to update the mapping in test.js
+    // The mapping is done in the retrieve_language function
+    var languages = [
+        "Perl",
+        "PHP",
+        "Go",
+        "Pascal",
+        "VisualBasic",
+        "Haskell",
+        "ObjectiveC",
+        "Fortran",
+        "Hack",
+        "Rust",
+        "Brainfuck",
+        "lolcode"
+    ];
     var element = document.getElementById("language");
-    var language = languages[Math.floor(Math.random()*languages.length)];
-    element.innerHTML = languagesReal;
-    element.value = language;
+    var index = Math.floor(Math.random()*languages.length);
+    element.value = languages[index];
 
     var seconds = 60;
     var mins = 1;

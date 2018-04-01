@@ -6,9 +6,11 @@ module.exports = {
     {
         var request = require('request');
 
+        console.log('language code:', retrieve_language(lang));
+
         var program = {
             script : text,
-            language: lang,
+            language: retrieve_language(lang),
             versionIndex: "0",
             clientId: "8f618a541abc0980378440af84c904a6",
             clientSecret:"d75f203ec72e17920299fdbf06690017444dccb01704e469534ab06586543665"
@@ -25,6 +27,11 @@ module.exports = {
                 console.log('statusCode:', response && response.statusCode);
             } else {
                 console.log('Code Execution Result:', body);
+                // Catch no input return
+                if (!body.output) {
+                    callback(false, body.outpu);
+                    return;
+                }
                 // Catch error codes (since they are longer than expected results)
                 if (body.output.length > maxlen) {
                     callback(false, body.output);
@@ -53,3 +60,22 @@ module.exports = {
         });
     }
 };
+
+function retrieve_language(real_name)
+{
+    var languages = {
+        Perl : "perl",
+        PHP: "php",
+        Go : "go",
+        Pascal : "pascal",
+        VisualBasic : "vbn",
+        Haskell : "haskell",
+        ObjectiveC : "objc",
+        Fortran : "fortran",
+        Hack : "hack",
+        Rust : "rust",
+        Brainfuck : "brainfuck",
+        lolcode : "lolcode"
+    };
+    return languages[real_name];
+}
