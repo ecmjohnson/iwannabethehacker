@@ -1,11 +1,14 @@
-function grab_code() {
-    var s = document.getElementById("codeTextArea").value;
-    console.log(s);
-    alert(s);
-    submit_code(s);
+var textAreaCleared = false;
+
+function clearText() {    
+    if (!textAreaCleared) {
+        document.getElementById('codeTextArea').value = "";
+        textAreaCleared = true;
+    }
 }
 
 window.onload = function() {
+
     // NOTE: to add a language, you also need to update the mapping in test.js
     // The mapping is done in the retrieve_language function
     var languages = [
@@ -24,6 +27,7 @@ window.onload = function() {
     var element = document.getElementById("language");
     var index = Math.floor(Math.random()*languages.length);
     element.value = languages[index];
+    document.getElementById('codeTextArea').value = "/*" + element.value + " language code.*/";
 
     // Generate the test number
     var test_index = Math.floor(Math.random() * number_of_tests);

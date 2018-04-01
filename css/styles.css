@@ -17,20 +17,34 @@
 
 .instructionsContainer {
     width: 80%;
-    height: 200px;
+    height: 250px;
     margin: auto;
     padding: 10px;
 }
 .newLanguage {
     width: 15%;
-    height: 200px;
+    height: 250px;
     float: left;
 }
 .rules {
     margin-left: 15%;
-    height: 200px;
+    height: 250px;
 }
 
 body {
     background: #d8e7ff;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.button {
+    background-color: #4286f4;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    
 }
