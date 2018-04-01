@@ -15,6 +15,10 @@ module.exports = {
 
         <body>
         <p>You have successfully completed the challenge! :)</p>
+        <form action="index.html">
+            <br>
+            <input type="submit" value="Celebrate" />
+        </form>
         </body>
         </html>
     `,
@@ -38,6 +42,10 @@ module.exports = {
     `,
     failure_part2 : `
         </p>
+        <form action="index.html">
+            <br>
+            <input type="submit" value="Cry again" />
+        </form>
         </body>
         </html>
     `
