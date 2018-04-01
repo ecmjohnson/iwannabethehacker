@@ -14,7 +14,7 @@ module.exports = {
         </head>
 
         <body>
-        <p>You have successfully completed the challenge! :)</p>
+        <p>You have successfully completed the challenge! 😁</p>
         <form action="index.html">
             <br>
             <input type="submit" value="Celebrate" />
@@ -37,7 +37,7 @@ module.exports = {
         </head>
         
         <body>
-        <p>You have failed the challenge. :(</p>
+        <p>You have failed the challenge. 😢</p>
         <p>
     `,
     failure_part2 : `

@@ -12,13 +12,25 @@ var responses = require('./js/responses.js');
 
 app.post('/', function(req, res) {
     console.log('Request in server:', req.body);
-    testing.submit_code(req.body.code, ['hello', 'Hello', 'hello\n', 'Hello\n'], function (result, output) {
+    // NOTE: this must be synchronized with definitions.js
+    // The maximum length of valid stdout results
+    var test_maxlen = [
+        8,
+        12
+    ]
+    var test_expected = [
+        ['hello', 'Hello', 'hello\n', 'Hello\n'],
+        ['1,5,10,25', '1 5 10 25', '1;5;10;25']
+    ];
+
+    var test_index = req.body.testindex;
+    testing.submit_code(req.body.code, test_expected[test_index], function (result, output) {
         if (result) {
             return res.send(responses.success);
         } else {
             return res.send(responses.failure_part1 + output + responses.failure_part2);
         }
-    }, req.body.language, 8);
+    }, req.body.language, test_maxlen[test_index]);
     return;
 });
 

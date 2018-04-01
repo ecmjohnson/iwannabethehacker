@@ -14,7 +14,6 @@ window.onload = function() {
         "Go",
         "Pascal",
         "VisualBasic",
-        "Haskell",
         "ObjectiveC",
         "Fortran",
         "Hack",
@@ -26,8 +25,15 @@ window.onload = function() {
     var index = Math.floor(Math.random()*languages.length);
     element.value = languages[index];
 
+    // Generate the test number
+    var test_index = Math.floor(Math.random() * number_of_tests);
+    this.document.getElementById("testindex").value = test_index;
+    var test_string = test_description[test_index];
+    this.document.getElementById("description").innerHTML = test_string;
+
+    // Start the timer based on the time
+    var mins = test_time[test_index];
     var seconds = 60;
-    var mins = 1;
     function tick() {
         var counter = document.getElementById("timer");
         var current_minutes = mins-1;

@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <script src="js/definitions.js"></script>
   <script src="js/ui.js"></script>
   <form name="challenge" method="post" action="/">
     <p id="timer"></p>
@@ -21,7 +22,8 @@
       <p><b>You will use:</b></p>
       <input id="language" name="language" readonly="readonly">
       <p><b>OBJECTIVE</b></p>
-      <p>Print "hello"</p>
+      <p id="description">Print "hello"</p>
+      <input id="testindex" name="testindex" type="hidden" value="">
       </div>
       <div class="rules">
       <p><b>RULES</b></p>
