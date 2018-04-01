@@ -1,4 +1,4 @@
-# iwannabethehacker
+# I wanna be the !HACKER!
 The hardest, most realistic programming challenge since sliced bread.
 
 ## Inspiration
