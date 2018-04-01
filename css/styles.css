@@ -134,7 +134,9 @@ background-image: linear-gradient(30deg, #7caeff 12%, transparent 12.5%, transpa
 }
 
 
-.blue select    { color: #fff; }
+.blue select {
+    color: #fff; 
+}
 
 .indexInfoWelcome {
     color: white;
