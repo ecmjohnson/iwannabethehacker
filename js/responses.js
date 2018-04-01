@@ -42,6 +42,11 @@ module.exports = {
         </head>
         
         <body class="failBody">
+        <div class="video-background">
+            <div class="video-foreground">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bvim4rsNHkQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
         <p>You have failed the challenge. 😢</p>
         <p>
     `,
