@@ -80,8 +80,12 @@ background-image: linear-gradient(30deg, #7caeff 12%, transparent 12.5%, transpa
     font-size: 16px;
     border-radius: 8px;
     border: 4px solid #000;
+    cursor: pointer;
 }
 
+.button:hover {
+    background-color: #003a99;
+}
 
 .logo {
   margin: 50px auto;
@@ -122,6 +126,11 @@ background-image: linear-gradient(30deg, #7caeff 12%, transparent 12.5%, transpa
    height: 50px;
    overflow: hidden;
    width: 240px;
+   cursor: pointer;
+}
+
+.styled-select:hover {
+    background-color: #003a99;
 }
 
 .styled-select select {
@@ -182,6 +191,18 @@ background-image: linear-gradient(30deg, #7caeff 12%, transparent 12.5%, transpa
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;
 	animation: Gradient 15s ease infinite;
+}
+
+.successBody {
+    width: 100wh;
+	height: 90vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+    
 }
 
 @-webkit-keyframes Gradient {

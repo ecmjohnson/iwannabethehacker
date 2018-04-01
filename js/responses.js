@@ -13,7 +13,7 @@ module.exports = {
         <link rel="stylesheet" href="css/styles.css">
         </head>
 
-        <body class="challengeBody">
+        <body class="successBody">
         <p>You have successfully completed the challenge! 😁</p>
         <form action="index.html">
             <br>
