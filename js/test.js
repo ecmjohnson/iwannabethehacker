@@ -64,7 +64,8 @@ module.exports = {
 
 function retrieve_language(real_name)
 {
-    // NOTE: left side names *MUST* match the array in UI.js
+    // NOTE: left side names *MUST* match the array in ui.js
+    // and right side must match jdoodle API description
     var languages = {
         Perl : "perl",
         PHP: "php",

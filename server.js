@@ -13,16 +13,21 @@ var responses = require('./js/responses.js');
 app.post('/', function(req, res) {
     console.log('Request in server:', req.body);
     // NOTE: this must be synchronized with definitions.js
-    // The maximum length of valid stdout results
+    // The maximum length of valid stdout results (+1 for hackathon)
     var test_maxlen = [
         8,
-        12
-    ]
+        12,
+        6,
+        4
+    ];
     var test_expected = [
         ['hello', 'Hello', 'hello\n', 'Hello\n'],
-        ['1,5,10,25', '1 5 10 25', '1;5;10;25']
+        ['1,5,10,25', '1 5 10 25', '1;5;10;25', '1,5,10,25\n', '1 5 10 25\n', '1;5;10;25\n'],
+        ['15', '15\n'],
+        ['9', '9\n']
     ];
 
+    // Submit the code for evaluation and display the result
     var test_index = req.body.testindex;
     testing.submit_code(req.body.code, test_expected[test_index], function (result, output) {
         if (result) {
