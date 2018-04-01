@@ -12,9 +12,14 @@
 </head>
 
 <body>
-  <audio id="flyinglotus" src="audio/flyinglotuszodiacshit.mp3" autoplay="true" loop="true" preload="auto"></audio>
+  <audio id="flyinglotus" src="audio/flyinglotuszodiacshit.mp3" loop="true" preload="none" type="audio/mpeg"></audio>
+  <audio id="moonhooch" src="audio/moonhoochlightitup.mp3" loop="true" preload="none" type="audio/mpeg"></audio>
+  <audio id="donkeykong" src="audio/sanholodonkeykong.mp3" loop="true" preload="none" type="audio/mpeg"></audio>
+  <script src="js/audio.js"></script>
+
   <script src="js/definitions.js"></script>
   <script src="js/ui.js"></script>
+
   <form name="challenge" method="post" action="/">
     <p id="timer"></p>
     <section class="instructionsSection">
@@ -40,6 +45,7 @@
     <textarea onclick=clearText() id="codeTextArea" name="code" rows="15" cols="50"></textarea>
     <br>
     <input class="button" type="submit" value="YOU ONLY GET ONE SUBMISSION!! JUST LIKE IN THE PUNCH CARD DAYS!!">
-  </form>
+  </form> 
+
 </body>
 </html>
